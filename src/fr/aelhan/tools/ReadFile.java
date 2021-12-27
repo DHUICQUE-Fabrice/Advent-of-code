@@ -27,7 +27,7 @@ public class ReadFile {
 		String[] array1D = toStringArray1D(input, expr1);
 		String[][] array2D = new String[array1D.length][];
 		for (int i = 0; i < array1D.length; i++) {
-			array2D[i] = toStringArray1D(array1D[i], expr2);
+			array2D[i] = toStringArray1D(array1D[i].trim(), expr2);
 		}
 		return array2D;
 	}
@@ -36,7 +36,7 @@ public class ReadFile {
 		String[] stringArray = toStringArray1D(input, expression);
 		int[] datas = new int[stringArray.length];
 		for (int i = 0; i < datas.length; i++) {
-			datas[i] = Integer.parseInt(stringArray[i]);
+			datas[i] = Integer.parseInt(stringArray[i].trim());
 		}
 		return datas;
 	}
@@ -46,7 +46,7 @@ public class ReadFile {
 		int[][] intArray2D = new int[array2D.length][array2D[0].length];
 		for (int i = 0; i < intArray2D.length; i++) {
 			for (int j = 0; j < intArray2D[0].length; j++) {
-				intArray2D[i][j] = Integer.parseInt(array2D[i][j]);
+				intArray2D[i][j] = Integer.parseInt(array2D[i][j].trim());
 			}
 		}
 		return intArray2D;

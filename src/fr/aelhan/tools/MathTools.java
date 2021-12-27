@@ -17,4 +17,18 @@ public class MathTools {
 		max = Math.max(max, c);
 		return max;
 	}
+
+	public int med(int a, int b, int c) {
+		int med = Integer.MIN_VALUE;
+		if ((a >= b && a <= c) || (a <= b && a >= c)) {
+			med = a;
+		}
+		if ((b >= a && b <= c) || (b <= a && b >= c)) {
+			med = b;
+		}
+		if ((c >= b && c <= a) || (c <= b && c >= a)) {
+			med = c;
+		}
+		return med;
+	}
 }
