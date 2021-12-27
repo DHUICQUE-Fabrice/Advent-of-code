@@ -12,7 +12,6 @@ public class December02 {
 
 	public void format(String input) {
 		int[][] formatted = fileReader.toIntArray2D(input, "\r\n", "x");
-
 		solvePart1(formatted);
 		solvePart2(formatted);
 	}
@@ -26,7 +25,6 @@ public class December02 {
 			int extra = mathTools.min(first, second, third);
 			totalSquareFeet += 2 * first + 2 * second + 2 * third + extra;
 		}
-
 		System.out.println("Part 1 response : " + totalSquareFeet);
 	}
 
