@@ -48,7 +48,6 @@ public class December03 {
 				}
 			}
 		}
-
 		System.out.println("Part 1 response : " + houses);
 	}
 
