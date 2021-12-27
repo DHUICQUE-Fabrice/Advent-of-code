@@ -16,7 +16,6 @@ public class December04 {
 
 	public void format(String input) {
 		String formatted = input;
-
 		solvePart1(formatted);
 		solvePart2(formatted);
 	}
