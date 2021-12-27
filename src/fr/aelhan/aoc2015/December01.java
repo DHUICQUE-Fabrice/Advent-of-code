@@ -24,7 +24,6 @@ public class December01 {
 	}
 
 	public void solvePart2(String input) {
-
 		int floor = 0;
 		int answer = 0;
 		for (int i = 0; i < input.length(); i++) {
@@ -33,7 +32,6 @@ public class December01 {
 			if (floor == -1) {
 				break;
 			}
-
 		}
 		System.out.println("Part 2 response : " + answer);
 	}
