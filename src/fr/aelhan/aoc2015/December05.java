@@ -13,13 +13,11 @@ public class December05 {
 	public void format(String input) {
 
 		String[] formatted = fileReader.toStringArray1D(input, "\r\n");
-
 		solvePart1(formatted);
 		solvePart2(formatted);
 	}
 
 	public void solvePart1(String[] input) {
-
 		int nices = 0;
 		for (int i = 0; i < input.length; i++) {
 			if (checkVowels(input[i], 3)) {
@@ -30,7 +28,6 @@ public class December05 {
 				}
 			}
 		}
-
 		System.out.println("Part 1 response : " + nices);
 	}
 
@@ -65,7 +62,6 @@ public class December05 {
 			if (checkDoubleCouples(toCheck) && checkInterleaves(toCheck)) {
 				nices++;
 			}
-
 		}
 		System.out.println("Part 2 response : " + nices);
 	}
