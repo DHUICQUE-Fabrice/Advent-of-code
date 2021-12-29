@@ -10,19 +10,49 @@ public class December05 {
 	GeneralTools generalTools = new GeneralTools();
 
 	public void format(String input) {
-		String formatted = input;
-		solvePart1(formatted);
-		solvePart2(formatted);
+		int[] formatted1 = fileReader.toIntArray1D(input, "\r\n");
+		int[] formatted2 = fileReader.toIntArray1D(input, "\r\n");
+		solvePart1(formatted1);
+		solvePart2(formatted2);
 	}
 
-	public void solvePart1(String input) {
+	public void solvePart1(int[] input) {
 
-		System.out.println("Part 1 response : ");
+		int steps = 0;
+		int pos = 0;
+		while (true) {
+			try {
+				int instruction = input[pos];
+				input[pos]++;
+				pos += instruction;
+			} catch (Exception e) {
+				break;
+			}
+			steps++;
+		}
+		System.out.println("Part 1 response : " + steps);
 	}
 
-	public void solvePart2(String input) {
-
-		System.out.println("Part 2 response : ");
+	public void solvePart2(int[] input) {
+		int steps = 0;
+		int pos = 0;
+		int instruction = 0;
+		int prevPos = 0;
+		while (true) {
+			try {
+				if (instruction >= 3) {
+					input[prevPos] -= 2;
+				}
+				instruction = input[pos];
+				input[pos]++;
+				prevPos = pos;
+				pos += instruction;
+			} catch (Exception e) {
+				break;
+			}
+			steps++;
+		}
+		System.out.println("Part 2 response : " + steps);
 	}
 
 }
