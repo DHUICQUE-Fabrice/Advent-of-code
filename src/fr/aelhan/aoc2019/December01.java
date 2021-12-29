@@ -10,19 +10,29 @@ public class December01 {
 	GeneralTools generalTools = new GeneralTools();
 
 	public void format(String input) {
-		String formatted = input;
+		int[] formatted = fileReader.toIntArray1D(input, "\r\n");
 		solvePart1(formatted);
 		solvePart2(formatted);
 	}
 
-	public void solvePart1(String input) {
-
-		System.out.println("Part 1 response : ");
+	public void solvePart1(int[] input) {
+		int totalFuel = 0;
+		for (int i = 0; i < input.length; i++) {
+			totalFuel += (input[i] / 3) - 2;
+		}
+		System.out.println("Part 1 response : " + totalFuel);
 	}
 
-	public void solvePart2(String input) {
+	public void solvePart2(int[] input) {
+		int totalFuel = 0;
+		for (int i = 0; i < input.length; i++) {
+			while ((input[i] / 3) - 2 >= 0) {
+				totalFuel += (input[i] / 3) - 2;
+				input[i] = (input[i] / 3) - 2;
+			}
+		}
 
-		System.out.println("Part 2 response : ");
+		System.out.println("Part 2 response : " + totalFuel);
 	}
 
 }
